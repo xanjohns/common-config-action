@@ -11,6 +11,6 @@ RUN apt-get update -qq \
 
 COPY * /update-common-config/
 
-RUN chmod +x /update-common-config/subtree.sh
+RUN chmod +x /update-common-config/subtree2.sh
 
-ENTRYPOINT ["/update-common-config/subtree.sh"]
+ENTRYPOINT ["/update-common-config/subtree2.sh"]
