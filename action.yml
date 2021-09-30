@@ -1,8 +1,5 @@
 name: 'Update Common Config'
 description: 'Pulls in all new changes from the Common Config subtree, and submits them as a pull request'
-inputs:
-outpus:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
