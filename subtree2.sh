@@ -12,3 +12,4 @@
 echo "Hello world!"
 touch newFile.txt
 ls -a
+git subtree add --prefix third_party/common-config https://github.com/SymbiFlow/symbiflow-common-config.git main --squash
