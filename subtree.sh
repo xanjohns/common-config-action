@@ -63,7 +63,7 @@
     LOG_MESSAGE="${LOG_MESSAGE}
 ${FILES_ADDED}"
  
-    echo "::set-output name=LOG_MESSAGE::${LOG_MESSAGE}"
+    echo "::set-output name=LOG_MESSAGE::from_subtree}"
 
     git add .
     git commit -m "Move files to correct locations" --signoff
