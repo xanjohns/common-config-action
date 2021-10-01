@@ -9,8 +9,8 @@ RUN apt-get update -qq \
  && update-ca-certificates \
  && rm -rf /var/lib/apt/lists/*
 
-COPY subtree2.sh /update-common-config/
+COPY subtree.sh /update-common-config/
 
-RUN chmod +x /update-common-config/subtree2.sh
+RUN chmod +x /update-common-config/subtree.sh
 
-ENTRYPOINT ["/update-common-config/subtree2.sh"]
+ENTRYPOINT ["/update-common-config/subtree.sh"]
