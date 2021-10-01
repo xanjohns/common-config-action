@@ -62,6 +62,8 @@
     #Concatenate log message to use in PR description
     LOG_MESSAGE="${LOG_MESSAGE}
 ${FILES_ADDED}"
+ 
+    echo "::set-output name=LOG_MESSAGE::${LOG_MESSAGE}"
 
     git add .
     git commit -m "Move files to correct locations" --signoff
