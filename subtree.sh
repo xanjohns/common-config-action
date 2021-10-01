@@ -8,13 +8,13 @@
 #
 # SPDX-License-Identifier:	ISC
 
-    dir=${dir%*/}
+#    dir=${dir%*/}
 
     LOG_MESSAGE="## Modifications made by common-config"
     FILES_ADDED="### Files now present from common-config:"
 
     echo "Adding Subtree"
-    cd ${dir##*/}
+#    cd ${dir##*/}
 #    git checkout -b add-common-config
     git subtree add --prefix third_party/common-config https://github.com/SymbiFlow/symbiflow-common-config.git main --squash
 
