@@ -10,4 +10,5 @@
 
 
 echo "Hello world!"
+touch newFile.txt
 ls -a
