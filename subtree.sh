@@ -19,8 +19,8 @@
     git subtree add --prefix third_party/common-config https://github.com/SymbiFlow/symbiflow-common-config.git main --squash
 
     # Merge two commits that come from subtree and add DCO signoff
-#    git reset --soft HEAD~1 && git commit -m "Add common-config as a subtree"
-#    git commit --amend --no-edit --signoff
+    git reset --soft HEAD~1 && git commit -m "Add common-config as a subtree"
+    git commit --amend --no-edit --signoff
 
     #Make necessary directories
     shopt -s dotglob
@@ -54,13 +54,17 @@
     cd third_party/common-config
     rm -rf !(orig*)
     cd ../..
+    echo "Directory at end:"
+    pwd
+    echo "List contents"
+    ls -a
 
     #Concatenate log message to use in PR description
     LOG_MESSAGE="${LOG_MESSAGE}
 ${FILES_ADDED}"
 
-#    git add .
-#    git commit -m "Move files to correct locations" --signoff
+    git add .
+    git commit -m "Move files to correct locations" --signoff
 #    git status
    # git push origin add-common-config
    # gh pr create --repo SymbiFlow/${dir##*/} --title "Common-config: [${FEATURE_SET}]" --head $userID:add-common-config --body "${LOG_MESSAGE}"
