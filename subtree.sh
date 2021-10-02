@@ -67,7 +67,7 @@ ${FILES_ADDED}"
     BODYMESSAGE="hellow world\nand another world"
     echo -e "::set-output name=LOG_MESSAGE::${LOG_MESSAGE}"
     echo "::set-output name=CHANGES::${CHANGES}"
-
+    echo ${CHANGES}
     git add .
     git commit -m "Move files to correct locations" --signoff
 #    git status
