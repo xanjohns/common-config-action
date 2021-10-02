@@ -12,6 +12,7 @@
 
     LOG_MESSAGE="## Modifications made by common-config"
     FILES_ADDED="### Files now present from common-config:"
+    CHANGES=false
 
     echo "Adding Subtree"
 #    cd ${dir##*/}
