@@ -40,11 +40,13 @@
       if [[ -f ${file##*common-config/} ]]; then
         if ! cmp -s $file ${file##*common-config/}; then
         FILES_ADDED="${FILES_ADDED}(Updated)"
+        CHANGES=true
         filedir="$(dirname $file)"
         mv $file .${filedir##*common-config}
         fi
       else
       FILES_ADDED="${FILES_ADDED}(New)"
+      CHANGES=true
       filedir="$(dirname $file)"
       mv $file .${filedir##*common-config}
       fi
@@ -64,6 +66,7 @@
 ${FILES_ADDED}"
     BODYMESSAGE="hellow world\nand another world"
     echo -e "::set-output name=LOG_MESSAGE::${LOG_MESSAGE}"
+    echo "::set-output name=CHANGES::${CHANGES}"
 
     git add .
     git commit -m "Move files to correct locations" --signoff
