@@ -64,7 +64,7 @@
 
     #Concatenate log message to use in PR description
     #LOG_MESSAGE="${LOG_MESSAGE}
-${FILES_ADDED}"
+#${FILES_ADDED}"
     LOG_MESSAGE=${FILES_ADDED}
     LOG_MESSAGE="${LOG_MESSAGE//'%'/'%25'}"
     LOG_MESSAGE="${LOG_MESSAGE//$'\n'/'%0A'}"
