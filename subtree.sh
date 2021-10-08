@@ -69,7 +69,7 @@ ${FILES_ADDED}"
    # LOG_MESSAGE="${content//$'\n'/'%0A'}"
    # LOG_MESSAGE="${content//$'\r'/'%0D'}"
     BODYMESSAGE="hellow world\nand another world"
-    echo "::set-output name=LOG_MESSAGE::${LOG_MESSAGE}"
+    echo "::set-output name=LOG_MESSAGE::'${LOG_MESSAGE}'"
     echo "::set-output name=CHANGES::${CHANGES}"
     echo ${CHANGES}
     echo ${LOG_MESSAGE}
