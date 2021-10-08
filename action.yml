@@ -3,9 +3,6 @@ description: 'Pulls in all new changes from the Common Config subtree, and submi
 runs:
   using: "composite"
   steps:
-    - name: Docker
-      using: 'docker'
-      image: 'Dockerfile'
     - name: setup git configuration
       run: |
         git config user.name "GitHub Actions Bot"
