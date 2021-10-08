@@ -1,21 +1,5 @@
-name: 'Update Common Config'
-description: 'Pulls in all new changes from the Common Config subtree, and submits them as a pull request'
+name: 'Pull in subtree'
+description: 'Pulls in subtree using shell script'
 runs:
-  using: "composite"
-  steps:
-    - name: setup git configuration
-      run: |
-        git config user.name "GitHub Actions Bot"
-        git config user.email "<>"
-    - name: Pull in subtree
-      id: subtree
-      uses: ./.github/actions/subtree-action
-    - name: Create Pull Request
-      uses: peter-evans/create-pull-request@v3.10.1
-      if: ${{ steps.subtree.outputs.CHANGES == true }}
-      with:
-        branch: common-config-update
-        delete-branch: true
-        title: Common-config automatic update
-        body: "${{steps.subtree.outputs.LOG_MESSAGE}}"
-        labels: common-config
+  using: 'docker'
+  image: 'Dockerfile'

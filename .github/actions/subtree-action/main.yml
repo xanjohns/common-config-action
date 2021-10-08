@@ -1,5 +1,0 @@
-name: 'Pull in subtree'
-description: 'Pulls in subtree using shell script'
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
