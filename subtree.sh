@@ -65,9 +65,9 @@
     #Concatenate log message to use in PR description
     LOG_MESSAGE="${LOG_MESSAGE}
 ${FILES_ADDED}"
-    LOG_MESSAGE="${content//'%'/'%25'}"
-    LOG_MESSAGE="${content//$'\n'/'%0A'}"
-    LOG_MESSAGE="${content//$'\r'/'%0D'}"
+   # LOG_MESSAGE="${content//'%'/'%25'}"
+   # LOG_MESSAGE="${content//$'\n'/'%0A'}"
+   # LOG_MESSAGE="${content//$'\r'/'%0D'}"
     BODYMESSAGE="hellow world\nand another world"
     echo "::set-output name=LOG_MESSAGE::${LOG_MESSAGE}"
     echo "::set-output name=CHANGES::${CHANGES}"
